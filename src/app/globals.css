@@ -3,8 +3,18 @@
 @tailwind utilities;
 
 nav li{
-  @apply h-[60px] py-4
+  @apply h-[50px] py-4
 }
 nav > :nth-child(2) li:hover{
-  @apply border-b-4 border-gray-600
+  @apply border-b-2 border-pink-800
 }
+
+@layer utilities {
+  .border-gradient-moving {
+    border: 4px solid transparent;
+    border-image: linear-gradient(to right, purple, gold, green,  red, blue );
+    border-image-slice: 1;
+  }
+}
+
+

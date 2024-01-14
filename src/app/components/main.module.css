@@ -1,0 +1,14 @@
+.category {
+    width: 85%;
+    margin: 2em auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 250px);
+    gap: 20px;
+}
+
+.category > :nth-child(1) {
+    background-image: url('/image/i1png');
+    background-size: cover;
+
+}
