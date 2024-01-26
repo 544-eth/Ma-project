@@ -1,3 +1,4 @@
+'use Client'
 import styles from './main.module.css'
 import React from 'react'
 

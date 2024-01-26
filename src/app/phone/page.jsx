@@ -1,6 +1,11 @@
+'use Client'
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+
+
+
+
 
 
 
@@ -12,7 +17,7 @@ export const myProducts = [
         Opsystem: 'iOS',
         type: 'iphone',
         price: '380,000',
-        image: 'i1',
+        image: 'iqqw',
         description: `
         
         The iPhone 11 is powered by the A13 Bionic chip, which Apple claimed to be the fastest chip ever in a smartphone at the time of its release. The A13 Bionic chip improves overall performance, including faster app launches, smoother graphics, and efficient power management.`
@@ -298,25 +303,77 @@ export const myProducts = [
 
 ]
 
-export default function page() {
-    const toyGroup = myProducts.map(phones => (
-       <section key={phones.id} className='flex flex-col place-items-center bg-white p-4 rounded-xl'>
-            <Link href={`/products/${phones.id}`} title={phones.id}>
-                <Image src={`/image/${phones.image}.png`} alt={phones.id} width={200} height={250} />
+// const Kate = ({item}) => {
+//     const { image, id, price } = item
+//     return (
+//         <div>
+//             <div>
+//                 <Image src={image} alt='Iphone'/>
+//             </div>
 
-                <h2>{phones.id}</h2>
-                <h2>&#8358;{phones.price}</h2>
-            </Link>
+//             <div>
+//                 <p>{id}</p>
+//                 <p>{price}</p>
+                
+//             </div>
 
-       </section> 
-    ))
-  return (
+//         </div>
+//     )
+// }
+
+// export default Kate
+
+
+
+//  export default function Page() {
+
+//      const toyGroup = myProducts.map(phones => (
+//          <div className=' py-20 grid  px-12 ' key={phones.id}>
+//          <div className=' bg-gray-100 overflow-hidden rounded-lg shadow-xl shadow-inner shadow-lg'>
+//                  <section className=' group relative flex bg-gray-100 py-3 pb-10 flex-col place-items-center rounded-t-xl '>
+                    
+//                      <div>
+//                          <Link href={`/products/${phones.id.split(' ').join('_')}`} title={phones.id}>
+//                              <Image src={`/image/${phones.image}.png`} alt={phones.id} width={300} height={400} className=' group-hover:rotate-6 group-hover:scale-105 transition-transform object-cover w-[70vh] h-[40vh]'/>
+//                          </Link>
+//                      </div>
+//                      <div className=' absolute inset-0 flex flex-col items-center justify-end place-items-center px-2 text-center translate-x-[30%] group-hover:translate-x-0 transition-all duration-500'>
+//                          <button className=' bg-pink-950 text-white p-4 px-8 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'>Add to cart</button>
+//                      </div>
+                
+//                  </section>
+//                  <div className='bg-white p-2 grid place-items-center border-x border-b text-green-600 font-bold '>
+//                              <Link href={`/products/${phones.id.split(' ').join('_')}`} title={phones.id}>
+//                                  <h2>{phones.id}</h2>
+//                              </Link>
+//                              <h2>&#8358;{phones.price}</h2>
+//                  </div>
+//          </div>
+//      </div>  
+
+
+
+
+
+
+
+//  ))
+//  return (
     
-      <div>
-        <section className='grid md:grid-cols-4 shadow-inner sm:grid-cols-1 gap-[50px] w-4/5 m-auto'>
-            {toyGroup}
-        </section>
-      </div>
+//      <div>
+//          <section className='grid md:grid-cols-4 shadow-inner sm:grid-cols-1 gap-[50px] w-4/5 m-auto'>
+//              {toyGroup}
+//          </section>
+//        </div>
 
-  )
-}
+//    )
+//  }
+//<section key={phones.id} className='flex flex-col place-items-center bg-white p-4 rounded-xl'>
+          //         <Link href={`/products/${phones.id}`} title={phones.id}>
+          //             <Image src={`/image/${phones.image}.png`} alt={phones.id} width={200} height={250} />
+          
+          //             <h2>{phones.id}</h2>
+          //             <h2>&#8358;{phones.price}</h2>
+          //         </Link>
+          
+//</section>

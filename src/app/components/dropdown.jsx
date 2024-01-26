@@ -26,4 +26,4 @@ export default function Appdrop({title, answer}) {
     </div>
     
   )
-}
+} 

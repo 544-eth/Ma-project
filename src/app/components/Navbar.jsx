@@ -1,8 +1,9 @@
 "use client"
 import { IoSearchOutline } from "react-icons/io5";
-import { IoBagCheckOutline } from "react-icons/io5";
+import { LuShoppingCart } from "react-icons/lu";
 import React, { useState } from 'react'
 import Link from "next/link";
+
 import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
 
 
@@ -10,10 +11,18 @@ import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
 
 
 
-export default function Navbar() {
+
+
+export default function Navbar({size}) {
+    
+
+
     const [isOpened, setIsOpened] = useState(false)
+
+
   return (
     <header className=" bg-[#fff]  mx-5">
+         
         <div className=" flex items-center justify-between">
             <div className="grid  text-2xl md:text-4xl font-bold">
                 <Link href='/'>
@@ -32,7 +41,7 @@ export default function Navbar() {
                         </Link>
                         <Link href='/pages'>
                             <div className=" flex items-center justify-center space-y-[3px]  mt-4 ">
-                                <button onClick={() => setIsOpened((back) => !back)} className=" flex items-center gap-3  hover:border-b-2 border-pink-700 hover:text-pink-800 transition duration-700 ease-in-out">PAGES 
+                                <button onClick={() => setIsOpened((back) => !back)} className=" flex items-center gap-3 ">PAGES 
                                         {!isOpened ? (
                                             <AiOutlineCaretDown />
                                         ) : (
@@ -65,15 +74,26 @@ export default function Navbar() {
                     </ul>
                     
             </nav>
-            <div className=" ">
+            <div className=" text-[20px] md:text-[20px] flex  gap-5 ">
                     <ul className=" text-[20px] md:text-[20px] flex  gap-5"> 
                         <li>
                             <IoSearchOutline />
                         </li>
-                        <li>
-                            <IoBagCheckOutline />
-                        </li>
                     </ul>
+
+                    <div className=" relative cursor-pointer">
+                        
+                            <div>
+                                <Link href='/'>
+                                    
+                                        <LuShoppingCart/>
+                                    <span className=" absolute -top-2 -right-2 text-[13px] bg-gradient-to-r from-blue-600 to-red-700 h-[18px] w-[18px] rounded-full grid place-items-center text-white">{size}</span>
+                                    
+                                    
+                                </Link>
+                            </div>
+                        
+                    </div>
             </div>
         </div>
     </header>

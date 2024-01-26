@@ -1,6 +1,6 @@
 import React from 'react'
 
- export default function Main() {
+ export default function Mains() {
   return (
     <main className='flex justify-around bg-gradient-to-r from-slate-100 to-slate-200 py-36 pt-20'>
         <div className='px-20 grid pt-10 place-items-center'>
@@ -9,7 +9,7 @@ import React from 'react'
         </div>
         <div className='text-2xl grid pb-8 place-items-center'>
             <p>The home of Everything Gadgets We Make Sure </p>
-            <p>You're Just A Call Away From getting your surest product</p>
+            <p>You are Just A Call Away From getting your surest product</p>
         </div>
         
 

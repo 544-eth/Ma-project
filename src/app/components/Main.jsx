@@ -1,3 +1,4 @@
+'use Client'
 import Image from 'next/image'
 import React from 'react'
 
@@ -9,7 +10,7 @@ import React from 'react'
             <h1>iFEC<span className='text-green-900 font-extrabold'> Online </span> Store</h1>
         </div>
         <div className='flex pb-8'>
-            <p className='text-2xl'>The home of Everything Gadgets, We Make Sure <br />You're Just A Call Away From getting your surest product</p>
+            <p className='text-2xl'>The home of Everything Gadgets, We Make Sure <br />You are Just A Call Away From getting your surest product</p>
         </div>
         
 

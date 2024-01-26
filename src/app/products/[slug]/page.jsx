@@ -1,9 +1,10 @@
 "use client"
-import { myProducts } from '@/app/phone/page'
+import { myProducts } from '@/app/phone/Page'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { MdOutlineStar } from "react-icons/md";
+import { FaMinus,FaPlus } from "react-icons/fa";
 import { MdOutlineNoteAlt } from "react-icons/md";
 import Faq from '@/app/components/Faq'
 
@@ -12,7 +13,20 @@ import Faq from '@/app/components/Faq'
 
 
 
+
 export default function Page(props) {
+    const  [count, setCount] = useState(0)
+    
+    function increaseCount(){
+        setCount(count + 1)
+    }
+
+    function decreaseCount() {
+        setCount(count - 1)
+    }
+
+
+
     const ourProduct = myProducts.find(phones => phones.id.split(' ').join('_') == props.params.slug)
     const related = myProducts.filter(phones => phones.type == ourProduct.type && phones.id !== ourProduct.id)
 
@@ -20,7 +34,7 @@ export default function Page(props) {
         
         
         
-        <div className=' py-20 grid  px-12 '>
+        <div className=' py-20 grid  px-12 ' key={phones.id}>
             <div className=' bg-gray-100 overflow-hidden  w-[35vh] h-[60vh] rounded-lg shadow-lg '>
                 <section className=' group relative flex bg-gray-100 py-3 pb-10 flex-col place-items-center rounded-t-xl '>
                     <div key={phones.id}  className=''  >
@@ -67,7 +81,7 @@ export default function Page(props) {
                 </div>
                 </div>
                 <div className='flex flex-col items-center gap-5'>
-                    <Image src='/image/i12.png'   width={500} height={500} className='flex pt-20' />
+                    <Image src='/image/i12.png' alt=''  width={500} height={500} className='flex pt-20' />
                 </div>
             </main>
 
@@ -115,7 +129,7 @@ export default function Page(props) {
                             </div>
 
                             <div className=' m-auto w-96 text-gray-500'>
-                                <p>{ourProduct.description}</p> 
+                                <p className=' text-justify'>{ourProduct.description}</p> 
                             </div>
                         </div>
 
@@ -125,10 +139,25 @@ export default function Page(props) {
                                 <p className='text-green-800 py-4'>Quantity:</p>
                             </div>
 
-                            <div className='pb-10'>
-                                <input type="number" name="num" id="num" min={1} max={20} placeholder='1' className=' px-3 border text-[25px]' />
+                            <div className='  bg-green-100 w-fit border rounded-lg shadow-lg'>
+                                <div className=' flex items-center px-[36px] py-2 gap-4'>
+                                        <button className=' '  onClick={decreaseCount}>
+                                            <FaMinus/>
+                                        </button>
+                                        <span className=' font-bold text-[17px]' >
+                                            {count}
+                                        </span>
+                                        <button className=' ' onClick={increaseCount}>
+                                            <FaPlus/>
+                                        </button>
+                                </div>
                             </div>
-                            <button className='bg-green-800 text-yellow-50 px-10 rounded-lg py-2 hover:bg-gray-800 transition ease-in-out'>Add to cart</button>
+
+                            <div className=' pb-4'>
+
+                            </div>
+                            
+                            <button className=' bg-gradient-to-r from-green-900 to-pink-900 shadow-lg text-yellow-50 px-10 rounded-lg py-2 hover:bg-gradient-to-l from-pink-900 to to-green-900 hover:scale-95 transition-transform duration-300 ease-in-out'>Add to cart</button>
                         </div>
                     </div>
                 

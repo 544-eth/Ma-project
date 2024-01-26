@@ -7,8 +7,4 @@
     gap: 20px;
 }
 
-.category > :nth-child(1) {
-    background-image: url('/image/i1png');
-    background-size: cover;
 
-}
