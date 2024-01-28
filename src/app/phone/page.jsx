@@ -11,7 +11,7 @@ import Image from 'next/image'
 
 export const myProducts = [
     {
-        id: 'iPhone 11Pro max',
+        id: 'iPhone 11 Pro max',
         brand: 'Apple',
         category: 'Pro Max',
         Opsystem: 'iOS',

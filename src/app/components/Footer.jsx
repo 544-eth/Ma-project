@@ -8,9 +8,9 @@ import { MdCallEnd } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <footer className=' flex h-[70vh] bg-green-50 '>
+    <footer className=' flex  h-[70vh] bg-gradient-radial from-slate-300 to-slate-500 '>
             <div className='  p-28  '>
-                <div className=' flex flex-row gap-40'>
+                <div className=' flex flex-row xl:flex-row lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-40'>
                     <div className=''>
                         <ul className=" text-4xl font-bold mb-4 ">
                             <li className="flex pl"><span className=" text-pink-800">i</span> FEC<span className="font-bold text-blue-800">.</span></li>
