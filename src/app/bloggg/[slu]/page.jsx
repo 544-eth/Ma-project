@@ -1,9 +1,6 @@
 import React from 'react'
-import { SlCalender } from "react-icons/sl";
 import { TiSocialTwitter } from "react-icons/ti";
-import { SlSocialSkype } from "react-icons/sl";
-import { SlSocialSpotify } from "react-icons/sl";
-import { SlSocialYoutube } from "react-icons/sl";
+import { SlSocialSkype, SlSocialSpotify, SlSocialYoutube, SlCalender } from "react-icons/sl";
 import Link from 'next/link'
 import Image from 'next/image'
 import { myBlogPost } from '@/blogarray/page' 
@@ -18,7 +15,7 @@ export default function Blo(props) {
 
 // ****************A slug for the blog****************\\
 
-            <div className='   '>
+            <div key={blogs.company} className='   '>
                 <div className=' flex pb-4 gap-5'>
                     
                     <section className=' overflow-hidden rounded-lg '>
@@ -43,29 +40,23 @@ export default function Blo(props) {
     ))
   return (
     <div>
-            <main className='flex justify-around bg-slate-200 py-35 pb-12'>
-                <div className='px-20 grid pt-10'>
-                <div className='flex pt-32  text-purple-900  '>
-                    <h1 className=' font-bold text-8xl tracking-wide'>{toBlog.happening}</h1>
-                </div>
-               
-                
+            <div className='bg-slate-200 '>
+                <main className=' grid place-items-center font-serif sm:grid-cols-1 md:grid-cols-2 h-[80vh]  w-[95%] m-auto py-35 xl:gap-[35vw] '>
+                        <div className='flex text-purple-400 mt-32 md:mt-0 '>
+                            <h1 className=' font-bold text-3xl sm:text-4xl md:text-4xl lg:text-6xl tracking-wide'>{toBlog.happening}</h1>
+                        </div>
+                        <div className=' flex mb-20 md:mb-0 md:w-[200px]  lg:w-[300px]'>
+                            <Image src='/image/gray6.png'   width={300} height={300} className=' ' />
+                        </div>
+                </main>
+            </div>
 
-                <div className=' pt-3'>
-                    <button className=' pt-3 font-bold rounded-2xl  hover:text-pink-800 transition duration-300 ease-in-out'>WATCH NOW</button>
-                </div>
-                </div>
-                <div className='flex flex-col items-center gap-5 '>
-                    <Image src='/image/blog1.png'   width={400} height={400} className='flex pt-20 ' />
-                </div>
-            </main>
+            <div className=' bg-slate-100'>
+                <div className=' grid  w-[90%] m-auto gap-20 md:grid-cols-2 py-20 sm:grid-cols-1'>
 
-            <div className='flex flex-col  md:grid-cols-2 sm:grid-cols-1 h-[300vh]  gap-4 bg-slate-50'>
-                <div className='flex justify-around py-20'>
-
-                    <div className=' w-[50%]    '>
-                        <div className='  m-auto bg-contain '>
-                            <Image src={`/image/${toBlog.image}.jpg`}  width={500} height={400} className=' rounded-md w-full'/>
+                    <div className=' font-serif '>
+                        <div className='  m-auto bg-contain  '>
+                            <Image src={`/image/${toBlog.image}.jpg`}  width={200} height={200} className=' rounded-md w-full'/>
                         </div>
 
                         <div className=' flex items-center justify-between py-3'>
@@ -78,53 +69,52 @@ export default function Blo(props) {
                         </div>
                         <div>
                             
-                            <p className='  line-h-9 tracking-wide text-[16px] text-slate-600'>{toBlog.event1}</p>
+                            <p className=' text-justify tracking-wide text-[16px] text-slate-600'>{toBlog.event1}</p>
                             
-
                         </div>
 
-                            <div className=' flex pt-5 items-center justify-center  '>
-                                <h2 className=' text-purple-950 text-[45px] border shadow-md shadow-inner bg-slate-100 px-10 rounded-xl'>
+                            <div className=' grid place-items-center pt-5 '>
+                                <h2 className=' text-purple-950 text-2xl sm:text-3xl border shadow-md  bg-slate-100 px-10 rounded-xl'>
                                     Mac Book Air 
                                 </h2>
                             </div>
-                            <div className=' flex justify-between py-10'>
-                                <div className='  w-[300px] rounded-lg shadow-md shadow-inner   bg-slate-100  h-[150px] flex justify-center items-center '>
+                            <div className=' grid place-items-center gap-5 md:grid-cols-1  lg:grid-cols-2 py-10'>
+                                <div className='  w-[300px] lg:w-[200px] lg:p-4 rounded-lg shadow-md shadow-blue-700    bg-slate-100  h-[150px] flex justify-center items-center '>
                                     <Image src='/image/ine.png' width={200} height={200} className=' '/>
                                 </div>
-                                <div className='  w-[300px] rounded-lg shadow-md shadow-inner  bg-slate-100  h-[150px] flex justify-center items-center'>
+                                <div className='  w-[300px] lg:w-[200px] lg:p-4 rounded-lg shadow-md shadow-blue-700   bg-slate-100  h-[150px] flex justify-center items-center'>
                                     <Image src='/image/ime.png' width={200} height={200} />
                                 </div>
                             </div>
 
                             <div>
-                                <p className='  tracking-wide text-[16px] text-slate-600 '>{toBlog.event2}</p>
+                                <p className='  tracking-wide text-justify text-[16px] text-slate-600 '>{toBlog.event2}</p>
                                 <div className=' border-b-2 py-10'> </div>
 
-                                <div className=' py-5 flex  ' >
-                                    <div className=' flex gap-5 items-center' >
-                                    <h3 className=' text-purple-700 font-bold text-3xl'>Tag: </h3>
-                                    <ul className=' flex flex-row text-[16px] text-slate-600 gap-5'>
-                                        <li>{toBlog.person}</li>
-                                        <li>{toBlog.company}</li>
-                                        <li>{toBlog.office}</li>
-                                    </ul>
+                                <div className=' py-5  ' >
+                                    <div className='  gap-5  grid place-items-start xl:place-items-center' >
+                                            <h3 className=' text-purple-700 font-bold text-3xl'>Tag: </h3>
+                                            <ul className=' grid xl:flex  text-[16px] text-slate-600 gap-5'>
+                                                <li>{toBlog.person}</li>
+                                                <li>{toBlog.company}</li>
+                                                <li>{toBlog.office}</li>
+                                            </ul>
 
-                                    <div className='flex flex-row gap-5 pl-20'>
-                                        <h3 className=' text-purple-700 font-bold text-3xl'>Share: </h3>
-                                        <ul className=' flex items-center text-[16px] text-slate-600 gap-10'>
-                                        
-                                            <li href=''><SlSocialSpotify /></li>
+                                        <div className=' grid place-items-start xl:place-items-center  gap-5'>
+                                            <h3 className=' text-purple-700 font-bold text-3xl'>Share: </h3>
+                                            <ul className=' flex items-center text-[16px] text-slate-600 gap-10'>
                                             
+                                                <li href=''><SlSocialSpotify /></li>
+                                                
 
-                                            <li><SlSocialSkype />
-                                                                    </li>
-                                            <li><TiSocialTwitter />
-                                                                    </li>
-                                            <li><SlSocialYoutube />
-                                                                    </li>
-                                        </ul>
-                                    </div>
+                                                <li><SlSocialSkype />
+                                                                        </li>
+                                                <li><TiSocialTwitter />
+                                                                        </li>
+                                                <li><SlSocialYoutube />
+                                                                        </li>
+                                            </ul>
+                                        </div>
 
 
                                     </div>
@@ -139,8 +129,8 @@ export default function Blo(props) {
                     
                 
 
-                    <div className=''>
-                        <div className='grid place-items-center rounded-xl border-2 p-10  '>
+                    <div className=' font-serif'>
+                        <div className='grid place-items-center w-full rounded-xl border-2 p-10  '>
                             <div>
                                 <h2 className=' pb-3 text-purple-800 text-3xl'>Search Here</h2>
                             </div>
@@ -148,7 +138,7 @@ export default function Blo(props) {
                                 
                                 
                                     <form >
-                                        <input type="search" name="search" id="search" placeholder='Search. . .' className=' bg-transparent w-[400px]  rounded-xl p-2 border-none focus:shadow-xl outline-none  focus:border-green-900 border-2 transition duration-700 ease-in-out ' />
+                                        <input type="search" name="search" id="search" placeholder='Search. . .' className=' bg-transparent w-full  rounded-xl p-2 border-none focus:shadow-xl outline-none  focus:border-green-900 border-2 transition duration-700 ease-in-out ' />
                                     </form>
                                 
                                 

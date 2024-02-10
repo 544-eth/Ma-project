@@ -3,7 +3,7 @@ import React from 'react'
 export const myCategory = [
   {
     id: 'Best Selling',
-    title: 'Phones Selling Recently',
+    title: 'Phones Highly Sorte',
     buttun: 'Shop Now',
     image: 'gray6',
     folder: 'best-selling'

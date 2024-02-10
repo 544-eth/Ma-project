@@ -1,5 +1,5 @@
 'use Client'
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -17,7 +17,7 @@ export const myProducts = [
         Opsystem: 'iOS',
         type: 'iphone',
         price: '380,000',
-        image: 'iqqw',
+        image: 'i1',
         description: `
         
         The iPhone 11 is powered by the A13 Bionic chip, which Apple claimed to be the fastest chip ever in a smartphone at the time of its release. The A13 Bionic chip improves overall performance, including faster app launches, smoother graphics, and efficient power management.`
@@ -302,6 +302,8 @@ export const myProducts = [
     },
 
 ]
+
+
 
 // const Kate = ({item}) => {
 //     const { image, id, price } = item

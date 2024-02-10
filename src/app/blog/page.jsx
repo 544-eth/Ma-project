@@ -8,47 +8,42 @@ import { SlCalender } from "react-icons/sl";
 
 export default function Post() {
     const myArrayBlog = myBlogPost.map(blogg => (
-        <div className=' h-[100vh] '>
-
+        <div key={blogg.date} className=' h-[55vh] '>
             <div className='flex-row  p-5 gap-4 '>
-            <div className=' '>
-                <div className='rounded-xl shadow-xl overflow-hidden'>
-                    <Image src={`/image/${blogg.image}.jpg`} alt={blogg.person} width={420}  height={400} className=' rounded-xl transform hover:scale-125 hover:rotate-6 cursor-zoom-in transition-transform duration-300 translate-x bg-contain'/>
-                </div>
-                
-                <div className='flex flex-row m-auto py-6 items-center justify-between'>
-                    <div className='flex flex-row items-center gap-3 text-gray-500'>
-                        <Image src='/image/boy.png' width={40} height={40} />
-                        <p className=' italic'>{blogg.names}</p>
+                <div className='w-[280px] sm:w-[280px] md:w-[350px] '>
+                    <div className='rounded-xl shadow-md shadow-blue-400  overflow-hidden'>
+                        <Image src={`/image/${blogg.image}.jpg`} alt={blogg.person} width={420}  height={400} className=' rounded-xl transform hover:scale-125 hover:rotate-6 cursor-zoom-in transition-transform duration-300 translate-x '/>
                     </div>
-                    <div className='flex flex-row items-center gap-2 text-gray-500'>
-                        <SlCalender />  <p className=' italic'>{blogg.date}</p>
-                    </div>
-                </div>
-                <div className=' grid grid-cols-1 py-5  '>
-                    <Link href={`bloggg/${blogg.person.split(' ').join('_')}`} title={blogg.person}>
-                        <h2 className=' text-4xl pb-4 text-green-950'>{blogg.happening} </h2>
-                    </Link>
-                    <p>{blogg.event}</p>
-                </div> 
-                <div>
-                    <button className=' text-green-600 font-bold'>
-                        {blogg.next}
-                    </button>
-                </div>
-
-
                     
-                
+                    <div className='flex flex-row m-auto py-6 items-center justify-between'>
+                        <div className='flex flex-row items-center gap-3 text-gray-500'>
+                            <Image src='/image/boy.png' width={40} height={40} />
+                            <p className=' italic'>{blogg.names}</p>
+                        </div>
+                        <div className='flex flex-row items-center gap-2 text-gray-500'>
+                            <SlCalender />  <p className=' italic'>{blogg.date}</p>
+                        </div>
+                    </div>
+                    <div className=' grid grid-cols-1 py-5  '>
+                        <Link href={`bloggg/${blogg.person.split(' ').join('_')}`} title={blogg.person}>
+                            <h2 className=' text-4xl pb-4 text-green-950'>{blogg.happening} </h2>
+                        </Link>
+                        <p className=' text-justify'>{blogg.event}</p>
+                    </div> 
+                    <div>
+                        <button className=' text-green-600 font-bold'>
+                            {blogg.next}
+                        </button>
+                    </div>
 
 
-            </div>  
-            
+                        
+                    
+
+
+                </div>  
             </div>
-
-            
-
-    </div>
+        </div>
 
 
     ))
@@ -56,7 +51,7 @@ export default function Post() {
     <div>
         <Page2 />
 
-        <div className=' grid grid-cols-3 p-5 gap-4'>
+        <div className=' grid place-items-center w-[95%] m-auto xl:grid-cols-3 lg:grid-cols-2 py-24  md:grid-cols-2 sm:grid-cols-1 '>
            {myArrayBlog}
         </div>
 

@@ -10,7 +10,7 @@ export default function page(props) {
     const abtArray = newArrayPages.find(abt => abt.name.split(' ').join('_') == props.params.pagesarr)
 
     const bArray = newArrayPages.map(abt => (
-      <div>
+      <div key={abt.name}>
         <div>
           {/* <Link href={`/pageup/${abt.name.split(' ').join('_')}`} title={abt.name} >
               <Image src={`/image/${abt.image}.jpg`} title={abt.position} width={400} height={500} />
@@ -22,63 +22,59 @@ export default function page(props) {
 
   return (
     <div>
-            <main className='flex justify-around bg-gradient-radial from-purple-700 to-purple-950 h-[500px] py-35 pb-12'>
-                <div className='px-20 grid pt-10'>
-                  <div className='flex pt-32  text-white  '>
-                      <h1 className=' font-bold text-8xl'>{abtArray.name}</h1>
-                  </div>
-                 
-                </div>
-                <div className='flex flex-col items-center gap-5'>
-                    <Image src={`/image/${abtArray.image4}.png`}   width={500} height={500} className='flex pt-20' />
+            <main className='  bg-gradient-radial from-purple-700 to-purple-950  '>
+                <div className=' grid place-items-center md:flex md:justify-between w-[95%] m-auto h-[65vh]'>
+                          <h1 className=' font-bold text-6xl text-white 2xl:text-8xl'>{abtArray.name}</h1>
+                    <div className=''>
+                        <Image src={`/image/${abtArray.image4}.png`}   width={500} height={500} className='' />
+                    </div>
                 </div>
             </main>
 
             
-            <div className=' h-[170vh] bg-slate-50'>
-                  <div className='flex flex-row md:grid-cols-2 sm:grid-cols-1  '>
-                      <div className='flex justify-around gap-32 p-32 '>
+            <div className=' bg-yellow-500'>
+                  <div className='h-[150vh] md:h-[100vh] w-[95%] m-auto  place-items-center'>
+                      <div className=' grid place-items-center md:grid-cols-2 '>
 
-                          <div className=''>
-                              <Image src={`/image/${abtArray.image}.jpg`}  width={450} height={400} className='rounded-xl shadow-md' />
+                          <div className=' w-[300px] lg:w-[400px] py-10'>
+                              <Image src={`/image/${abtArray.image}.jpg`}  width={450} height={400} className=' rounded-lg' />
                           </div>
 
-                          <div>
-                          <div className='flex flex-col '>
+                          
+                              <div className='grid'>
 
-                                    <div className=' m-auto w-96 text-gray-500 gap-5 pb-5'>
-                                      <p className=' text-[29px]'>{abtArray.name}</p>
-                                      <div className=' py-3'>
-                                          <p className=' text-[25px] text-black'>Position: <span className=' text-gray-500 text-[20px]'> {abtArray.position} </span></p>
-                                          <p className=' text-[25px] text-black'>Level: <span className=' text-gray-500 text-[20px]'>{abtArray.level}  </span></p>
-                                          <p className=' text-[25px] text-black'>Phone Number: <span className=' text-gray-500 text-[20px]'> {abtArray.phone} </span></p>
-                                          <p className=' text-[25px] text-black'>Email: <span className=' text-gray-500 text-[20px]'>{abtArray.email}  </span></p>
-                                      </div>
+                                        <div className='  text-gray-500 gap-5 '>
+                                          <p className=' text-[29px]'>{abtArray.name}</p>
+                                          <div className=' py-3'>
+                                              <p className=' text-[25px] text-black'>Position: <span className=' text-gray-500 text-[20px]'> {abtArray.position} </span></p>
+                                              <p className=' text-[25px] text-black'>Level: <span className=' text-gray-500 text-[20px]'>{abtArray.level}  </span></p>
+                                              <p className=' text-[25px] text-black'>Phone Number: <span className=' text-gray-500 text-[20px]'> {abtArray.phone} </span></p>
+                                              <p className=' text-[25px] text-black'>Email: <span className=' text-gray-500 text-[20px]'>{abtArray.email}  </span></p>
+                                          </div>
 
-                                      <div className=' flex  text-[25px] '>
-                                        <ul className=' flex gap-5  '>
-                                          <Link href='tel:+2349047271158'>
-                                              <li className=' text-purple-900 hover:text-green-800 hover:translate-y-[-5px] hover:scale-125 hover:rotate-6 transform transition-all  duration-300 ease-in-out'><FaTelegramPlane /></li>
-                                          </Link>
-                                          <Link href='tel:+2349047271158'>
-                                              <li className=' text-purple-900 hover:text-green-800 hover:translate-y-[-5px] hover:scale-125 hover:rotate-6 transform transition-all  duration-300 ease-in-out'><FaWhatsapp /></li>
-                                          </Link>
-                                          <Link href='https://www.facebook.com' target="blank">
-                                              <li className=' text-purple-900 hover:text-green-800 hover:translate-y-[-5px] hover:scale-125 hover:rotate-6 transform transition-all  duration-300 ease-in-out'><FaFacebookMessenger /></li>
-                                          </Link>
-                                        </ul>
-                                        
-                                        
-                                        
+                                          <div className=' flex  text-[25px] '>
+                                            <ul className=' flex gap-5  '>
+                                              <Link href='tel:+2349047271158'>
+                                                  <li className=' text-purple-900 hover:text-green-800 hover:translate-y-[-5px] hover:scale-125 hover:rotate-6 transform transition-all  duration-300 ease-in-out'><FaTelegramPlane /></li>
+                                              </Link>
+                                              <Link href='tel:+2349047271158'>
+                                                  <li className=' text-purple-900 hover:text-green-800 hover:translate-y-[-5px] hover:scale-125 hover:rotate-6 transform transition-all  duration-300 ease-in-out'><FaWhatsapp /></li>
+                                              </Link>
+                                              <Link href='https://www.facebook.com' target="blank">
+                                                  <li className=' text-purple-900 hover:text-green-800 hover:translate-y-[-5px] hover:scale-125 hover:rotate-6 transform transition-all  duration-300 ease-in-out'><FaFacebookMessenger /></li>
+                                              </Link>
+                                            </ul>
+                                            
+                                            
+                                            
+                                          </div>
+                                          
                                       </div>
-                                       
-                                  </div>
-                                  <div className=' m-auto w-96 text-gray-500'>
-                                      <p>{abtArray.description1}</p>
-                                  </div>
+                                      <div className=' text-gray-500 text-justify '>
+                                          <p>{abtArray.description1}</p>
+                                      </div>
                               </div>
-
-                          </div>
+                          
                       
                       </div>
                   </div>

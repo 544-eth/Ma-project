@@ -34,19 +34,19 @@ export default function Page(props) {
         
         
         
-        <div className=' py-20 grid  px-12 ' key={phones.id}>
-            <div className=' bg-gray-100 overflow-hidden  w-[35vh] h-[60vh] rounded-lg shadow-lg '>
+        <div className=' py-20 grid place-items-center   ' key={phones.id}>
+            <div className=' bg-gray-100 lg:w-[300px] md:w-[300px] w-[300px] overflow-hidden  rounded-lg shadow-md shadow-green-400'>
                 <section className=' group relative flex bg-gray-100 py-3 pb-10 flex-col place-items-center rounded-t-xl '>
                     <div key={phones.id}  className=''  >
                         <Link href={`/products/${phones.id.split(' ').join('_')}`} title={phones.type}>
-                            <Image src={`/image/${phones.image}.png`} alt={phones.id} width={200} height={200} className=' group-hover:rotate-6 group-hover:scale-105 transition-transform object-cover ' />
+                            <Image src={`/image/${phones.image}.png`} alt={phones.id} width={200} height={200} className=' group-hover:rotate-6 group-hover:scale-105 transition-transform object-cover  ' />
 
                             
 
                         </Link>
                     </div>
                     <div className=' absolute inset-0 flex flex-col items-center justify-end place-items-center px-2 text-center translate-x-[30%] group-hover:translate-x-0 transition-all duration-500'>
-                            <button className=' bg-pink-950 text-white p-4 px-8 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500'>Add to cart</button>
+                            <button className=' bg-gradient-to-tr from-blue-800 to-blue-400 text-white p-4 px-8 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500'>Add to cart</button>
                     </div>
 
                     
@@ -64,73 +64,69 @@ export default function Page(props) {
         </div>
     ))
   return (
-      <div>
-        
-            <main className='flex justify-around bg-slate-200 py-35 pb-12'>
-                <div className='px-20 grid pt-10'>
-                <div className='flex pt-32  text-purple-900  '>
-                    <h1 className=' font-bold text-8xl'>{ourProduct.id}</h1>
-                </div>
-                <div className='flex '>
-                    <p className='text-2xl text-gray-500'>You get 30% off Discount when you purchase <br />This December </p>
-                </div>
-                
-
-                <div className=''>
-                    <button className='font-bold rounded-2xl  hover:text-pink-800 transition duration-300 ease-in-out'>WATCH NOW</button>
-                </div>
-                </div>
-                <div className='flex flex-col items-center gap-5'>
-                    <Image src='/image/i12.png' alt=''  width={500} height={500} className='flex pt-20' />
-                </div>
-            </main>
+      <div className=' '>
+            <div className=' bg-slate-200'>
+                <main className='grid place-items-center w-[95%] m-auto 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2  md:h-[100vh] md:justify-between sm:h-[130vh] sm:grid sm:place-items-center h-[100vh] '>
+                    <div className=' pt-36 sm:pt-28'>
+                        <div className='  text-purple-900 sm:mb-5'>
+                            <h1 className=' font-t font-serif 2xl:text-8xl xl:text-7xl lg:text-7xl md:text-6xl sm:text-6xl text-5xl'>{ourProduct.id}</h1>
+                        </div>
+                        <div className=''>
+                            <p className='text-2xl text-gray-500'>You get 30% off Discount when you purchase <br />This December </p>
+                        </div>
+                    </div>
+                    <div className=' lg:pl-52 md:pl-44 md:w-[600px]'>
+                        <Image src='/image/i12.png' alt=''  width={500} height={500} className=' ' />
+                    </div>
+                </main>
+            </div>
 
 
-            <div className='flex flex-row md:grid-cols-2 sm:grid-cols-1 h-[100vh] gap-4 bg-slate-50'>
-                <div className='flex justify-around '>
+            <div className='  bg-slate-50'>
+                <div className='grid place-items-center w-[95%] m-auto 2xl:justify-between xl:justify-between lg:justify-around md:grid-cols-2  sm:grid-cols-1 h-[160vh] md:h-[100vh]  '>
 
-                    <div className=' w-[450px] pb-20 bg-slate-100 border shadow-lg m-20 rounded-xl text-5xl place-items-center grid'>
+                    <div className='grid place-items-center w-[280px] sm:w-[320px] md:w-[300px] h-[450px] lg:w-[380px]  bg-slate-100 border shadow-md shadow-green-400  rounded-xl   '>
                         <Image src={`/image/${ourProduct.image}.png`} alt={ourProduct.id} width={300} height={400} />
                     </div>
 
                     <div>
-                    <div className='flex flex-col m-auto pl-2 py-10 '>
-                        <div className='text-4xl text-pink-800 font-semibold '>
-                            
-                                <h1>{ourProduct.id}</h1>
-                            </div>
-
-                            <div className='py-3 text-green-800 text-2xl'>
-                                <h2>&#8358;{ourProduct.price}</h2>
-                            </div>
-
-                            <div className='flex flex-row gap-5 py-3'>
-                                <ul className='flex flex-row '>
-                                    <li className='text-[gold]'><MdOutlineStar /></li>
-                                    <li className='text-[gold]'><MdOutlineStar /></li>
-                                    <li className='text-[gold]'><MdOutlineStar /></li>
-                                    <li className='text-[gold]'><MdOutlineStar /></li>
-                                    <li className='text-[gold]'><MdOutlineStar /></li>
-                                </ul>
-
-                                <div>
-                                    <p>5 Reviews</p>
+                        <div className='flex flex-col m-auto pl-2  '>
+                            <div className='text-4xl text-slate-600 font-serif font-semibold '>
+                                
+                                    <h1>{ourProduct.id}</h1>
                                 </div>
 
-                                <div className='text-[25px]'>
-                                    <Link href='/'><MdOutlineNoteAlt />
-
-                                    </Link>
+                                <div className='py-3 font-serif text-gray-800 text-2xl'>
+                                    <h2>&#8358;{ourProduct.price}</h2>
                                 </div>
 
-                                <div>
-                                    <p>Write a review</p>
-                                </div>
-                            </div>
+                                <div className='flex flex-row gap-5 py-3'>
+                                    <ul className='flex flex-row '>
+                                        <li className='text-[gold]'><MdOutlineStar /></li>
+                                        <li className='text-[gold]'><MdOutlineStar /></li>
+                                        <li className='text-[gold]'><MdOutlineStar /></li>
+                                        <li className='text-[gold]'><MdOutlineStar /></li>
+                                        <li className='text-[gold]'><MdOutlineStar /></li>
+                                    </ul>
 
-                            <div className=' m-auto w-96 text-gray-500'>
-                                <p className=' text-justify'>{ourProduct.description}</p> 
-                            </div>
+                                    <div>
+                                        <p>5 Reviews</p>
+                                    </div>
+
+                                    <div className='text-[25px]'>
+                                        <Link href='/'><MdOutlineNoteAlt />
+
+                                        </Link>
+                                    </div>
+
+                                    <div>
+                                        <p>Write a review</p>
+                                    </div>
+                                </div>
+
+                                <div className=' w-[85%]   text-gray-500'>
+                                    <p className=' font-serif text-justify'>{ourProduct.description}</p> 
+                                </div>
                         </div>
 
                         <div className=' m-auto pl-2 py-'>
@@ -157,22 +153,24 @@ export default function Page(props) {
 
                             </div>
                             
-                            <button className=' bg-gradient-to-r from-green-900 to-pink-900 shadow-lg text-yellow-50 px-10 rounded-lg py-2 hover:bg-gradient-to-l from-pink-900 to to-green-900 hover:scale-95 transition-transform duration-300 ease-in-out'>Add to cart</button>
+                            <button className='  bg-gradient-to-tr from-blue-900 to-blue-500 text-yellow-50 px-10 rounded-lg py-2  hover:scale-95 transition-transform duration-300 ease-in-out'>Add to cart</button>
                         </div>
                     </div>
                 
                 </div>
             </div>
 
-            <div className=' h-[50vh] pt-16  ' >
-                <Faq/>
+            <div className='  bg-slate-50 '>
+                <div className=' grid place-items-center w-[95%] m-auto h-[80vh]   ' >
+                    <Faq/>
+                </div>
             </div>
 
             <div >
                 <div className='grid place-items-center text-5xl py-16  '>
                     <h2 className='border-4 border-solid border-r-emerald-800 border-l-emerald-800 rounded-xl animate-flowColors p-4 text-gray-800'>Related Product</h2>
                 </div>
-                <div className='grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-4 gap-20 m-10 '>
+                <div className='grid 2xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-3 gap-1 w-[95%] m-auto'>
 
                     {newProduct}
                     
