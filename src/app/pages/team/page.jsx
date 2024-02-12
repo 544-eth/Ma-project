@@ -8,8 +8,60 @@ import { newArrayPages } from '@/app/arrayB/nextA'
 export default function Aboutteam() {
   const bArray = newArrayPages.find(abb => abb.name.split(' ').join('_'))
   const teamAbout = newArrayPages.slice(3, 7).map(abb => (
-    <div>
-            <div key={abb.name}>
+    <div key={abb.name}>
+            <div className=' '>
+                  <div className=' grid place-items-center '>
+                      <Image src={`/image/${abb.image}.jpg`} width={300} height={350} className=' rounded-lg border-[3px] border-teal-700'/>
+
+
+                      <div className=' grid place-items-center   relative   '>
+                          
+                          <div className=' group  flex flex-col w-[175px] sm:w-[200px]  p-1 px-5 bg-teal-700 rounded-b-md overflow-hidden'>
+                                     
+                                      
+                                        <div className=' flex flex-col py-2 items-center transition transform'>
+                                          <Link href={`/pageup/${abb.name.split(' ').join('_')}`} title={abb.name}>
+                                              <h2 className=' text-white text-nowrap font-medium  text-[17px]'>{abb.name}</h2>
+                                          </Link>
+                                              <h2 className=' text-white font-medium text-[17px]'>{abb.position}</h2>
+                                        </div>
+                                       
+
+
+                                      <div className='  flex flex-col w-[175px] sm:w-[200px]  items-center justify-center left-0 p-1 bg-green-700  rounded-md absolute  translate-y-0 mb-[22px] group-hover:translate-y-[-27px] overflow-hidden opacity-0 group-hover:opacity-100 transform transition-all  duration-300 ease-in-out '>
+                                       <div className=' flex items-center gap-5   '>
+                                          <Link href='tel: +23490388925821'>
+                                              <MdCallEnd  className=' text-[22px] text-white  '/>
+                                          </Link>
+
+                                          <Link href='tel: +23490388925821'>
+                                              <FaWhatsapp  className=' text-[22px] text-white '/>
+                                          </Link>
+                                      </div> 
+                                      
+                                          <div className=' flex flex-col py-2 items-center'>
+                                                <Link href={`/pageup/${abb.name.split(' ').join('_')}`} title={abb.name}>
+                                                    <h2 className=' text-white font-medium  text-nowrap text-[17px]'>{abb.name}</h2>
+                                                </Link>
+                                                    <h2 className=' text-white font-medium text-[17px]'>{abb.position}</h2>
+                                          </div>
+                                            
+                                
+                          </div>     
+                                
+                          </div>
+
+
+                          
+
+                      </div>
+
+
+
+                  </div>
+         </div>
+
+            {/* <div >
                     <div>
                           <div className=' '>
                                 <Image src={`/image/${abb.image}.jpg`} width={400} height={450} className=' rounded-lg border-[3px] border-teal-700'/>
@@ -55,43 +107,45 @@ export default function Aboutteam() {
 
                       </div>
                     </div>
-            </div>
+            </div> */}
     </div>
   ))
 
   return (
     <div>
-        <main className='flex justify-between bg-gradient-radial from-green-700 to-teal-900 h-[500px] gap-3'>
-                <div className='px-10 grid '>
-                  <div className='flex  text-white mt-52 '>
-                      <h1 className=' font-bold text-8xl'>{bArray.tag22}</h1>
-                  </div>
-                  <div className='flex text-[20px] mb-32 text-white gap-2'>
-                      <Link href='/Home'>
-                          <p>Home</p>
-                      </Link>
-                      <p className='  text-white'>-</p>
-                      <p >{bArray.tag23} </p>
-                  </div>
-                
+        <main className='  bg-gradient-radial from-blue-700 to-blue-900 '>
+            <div className='  grid place-items-center md:flex md:justify-between w-[95%] m-auto h-[70vh] md:h-[70vh] lg:h-[90vh] xl:h-[70vh] 2xl:h-[80vh] '>
+                    <div className='grid font-serif  '>
+                    <div className='flex  text-white mt-52 md:mt-0 '>
+                        <h1 className=' font-bold text-8xl'>{bArray.tag22}</h1>
+                    </div>
+                    <div className='flex text-[20px]  text-white gap-2'>
+                        <Link href='/Home'>
+                            <p>Home</p>
+                        </Link>
+                        <p className='  text-white'>-</p>
+                        <p >{bArray.tag23} </p>
+                    </div>
+                    
 
-                  
-                </div>
-                <div className='flex flex-col p-10'>
-                    <Image src={`/image/${bArray.image4}.png`}   width={450} height={450} className='flex pt-24 ' />
-                </div>
+                    
+                    </div>
+                    <div className=''>
+                        <Image src={`/image/${bArray.image4}.png`}   width={450} height={450} className=' pb-24 sm:pb-0 ' />
+                    </div>
+            </div>
         </main>
 
-        <div className=' bg-gradient-to-r from-gray-50 to-gray-200 h-[50vh]'>
-              <div className=' flex text-[30px] font-extrabold p-20'>
-                <h2>{bArray.secondH2}</h2>
+        <div className=' bg-gradient-to-tl from-teal-100 to-purple-200 '>
+              <div className=' grid place-items-center h-[50vh] md:h-[70vh] lg:h-[100vh]  font-thin w-[95%] m-auto'>
+                <h2 className=' font-serif text-gray-600 lg:text-[30px]  '>{bArray.secondH2}</h2>
               </div>
         </div>
 
 
-        <div className=' flex flex-row items-center justify-between h-[100vh] gap-20 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 bg-gradient-radial from-gray-50 to-gray-200 p-20' >
+        <div className=' grid gap-28 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 2xl:h-[70vh] bg-gradient-radial from-gray-50 to-gray-200 p-20' >
             {teamAbout}
-        </div >
+        </div>
     </div>
   )
 }

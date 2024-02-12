@@ -70,7 +70,7 @@ export default function Aboutus() {
   return (
     <div>
             <main className='  bg-gradient-radial from-blue-700 to-blue-950'>
-                <div className=' grid place-items-center w-[95%] m-auto  md:flex md:justify-between h-[75vh]' >
+                <div className=' grid place-items-center w-[95%] m-auto  md:flex md:justify-between h-[70vh] md:h-[70vh]' >
                             <div className='px-10 grid font-serif '>
                                 <div className='flex  text-white mt-48 md:mt-0 '>
                                     <h1 className=' font-bold text-8xl'>{eArray.tag}</h1>

@@ -12,7 +12,7 @@ import { AiOutlineMessage } from "react-icons/ai";
 export default function Contact() {
   return (
     <div>
-        <div className=' bg-slate-200 '>
+        <div className='  bg-gradient-to-bl from-red-100 to-blue-100 '>
             <div className=' md:flex md:justify-between grid place-items-center h-[105vh] sm:h-[105vh xl:h-[90vh]  py-30 pb-12'>
                     <div className='px-10 grid pt-20'>
                             <div className='flex pt-5' >

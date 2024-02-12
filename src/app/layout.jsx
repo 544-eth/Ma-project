@@ -6,6 +6,7 @@ import './globals.css'
 
 
 
+
 const inter = Abel({ subsets: ['latin'], weight: ['400'] })
 const interB = Slabo_27px({ subsets: ['latin'], weight: ['400']})
 

@@ -23,33 +23,35 @@ export default function page(props) {
   return (
     <div>
             <main className='  bg-gradient-radial from-purple-700 to-purple-950  '>
-                <div className=' grid place-items-center md:flex md:justify-between w-[95%] m-auto h-[65vh]'>
+                <div className=' grid place-items-center md:flex md:justify-between w-[95%] m-auto h-[70vh]'>
+                    <div className=' mt-36 md:mt-0'>
                           <h1 className=' font-bold text-6xl text-white 2xl:text-8xl'>{abtArray.name}</h1>
-                    <div className=''>
+                    </div>
+                    <div className=' mb-36 md:mb-0 '>
                         <Image src={`/image/${abtArray.image4}.png`}   width={500} height={500} className='' />
                     </div>
                 </div>
             </main>
 
             
-            <div className=' bg-yellow-500'>
-                  <div className='h-[150vh] md:h-[100vh] w-[95%] m-auto  place-items-center'>
-                      <div className=' grid place-items-center md:grid-cols-2 '>
+            <div className=' bg-slate-200'>
+                  <div className=' grid py-32 h-[150vh] sm:h-[145vh] md:h-[120vh] lg:h-[120vh] xl:h-[100vh] w-[95%] m-auto  '>
+                      <div className='grid place-items-center md:grid-cols-2 md:place-items-start'>
 
-                          <div className=' w-[300px] lg:w-[400px] py-10'>
+                          <div className=' w-[300px] lg:w-[400px] xl:w-[700px] pb-5 grid place-items-center'>
                               <Image src={`/image/${abtArray.image}.jpg`}  width={450} height={400} className=' rounded-lg' />
                           </div>
 
                           
-                              <div className='grid'>
+                              <div className='grid font-serif'>
 
-                                        <div className='  text-gray-500 gap-5 '>
-                                          <p className=' text-[29px]'>{abtArray.name}</p>
-                                          <div className=' py-3'>
-                                              <p className=' text-[25px] text-black'>Position: <span className=' text-gray-500 text-[20px]'> {abtArray.position} </span></p>
-                                              <p className=' text-[25px] text-black'>Level: <span className=' text-gray-500 text-[20px]'>{abtArray.level}  </span></p>
-                                              <p className=' text-[25px] text-black'>Phone Number: <span className=' text-gray-500 text-[20px]'> {abtArray.phone} </span></p>
-                                              <p className=' text-[25px] text-black'>Email: <span className=' text-gray-500 text-[20px]'>{abtArray.email}  </span></p>
+                                        <div className='  text-gray-600'>
+                                          <p className=' text-[29px] md:text-4xl lg:text-5xl 2xl:text-7xl '>{abtArray.name}</p>
+                                          <div className='py-3 '>
+                                              <p className=' text-[25px] md:text-2xl 2xl:text-3xl text-black'>Position: <span className=' lg:text-2xl text-gray-500 text-[20px]'> {abtArray.position} </span></p>
+                                              <p className=' text-[25px] md:text-2xl 2xl:text-3xl text-black'>Level: <span className=' lg:text-2xl text-gray-500 text-[20px]'>{abtArray.level}  </span></p>
+                                              <p className=' text-[25px] md:text-2xl 2xl:text-3xl text-black'>Phone Number: <span className=' lg:text-2xl text-gray-500 text-[20px]'> {abtArray.phone} </span></p>
+                                              <p className=' text-[25px] md:text-2xl 2xl:text-3xl text-black'>Email: <span className=' lg:text-2xl text-gray-500 text-[20px]'>{abtArray.email}  </span></p>
                                           </div>
 
                                           <div className=' flex  text-[25px] '>
@@ -70,8 +72,8 @@ export default function page(props) {
                                           </div>
                                           
                                       </div>
-                                      <div className=' text-gray-500 text-justify '>
-                                          <p>{abtArray.description1}</p>
+                                      <div className=' text-gray-500 py-5 text-justify '>
+                                          <p className=' text-[20px] lg:text-2xl'>{abtArray.description1}</p>
                                       </div>
                               </div>
                           
