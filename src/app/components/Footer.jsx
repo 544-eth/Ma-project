@@ -9,23 +9,23 @@ import { MdCallEnd } from "react-icons/md";
 export default function Footer() {
   return (
     <footer className=' bg-gradient-to-bl from-blue-500 to-blue-800 '>
-            <div className=' w-[95%] m-auto '>
+            <div className=' w-[95%] m-auto'>
                 <div className=' grid m-auto xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-16 p-5'>
                     <div className=' '>
                         <h3 className=" text-4xl font-bold pb-5 border-b-4">
                             <p className="flex pl"><span className=" text-pink-800">i</span> FEC<span className="font-bold text-blue-800">.</span></p>
                         </h3>
-                        <p className=' text-[20px] font-serif text-white'>
+                        <p className=' text-[20px]  text-white'>
                             At iFec online store, you are one step closer to getting your 
                         </p>
 
-                        <p className=' mt-5 text-[20px] font-serif text-white'>Powered by <Link href='/'>iFec Store</Link></p>
+                        <p className=' mt-5 text-[20px]  text-white'>Powered by <Link href='/'>iFec Store</Link></p>
                     </div>
                     <div>
                         <h2 className=' pb-5 text-4xl text-yellow-300 border-b-4'>Contact Info </h2>
-                        <p className=' text-[20px] font-serif text-white'>14, Afam Okosi Street Victory Estate Iba Ojo Lagos State</p>
+                        <p className=' text-[20px]  text-white'>14, Afam Okosi Street Victory Estate Iba Ojo Lagos State</p>
                         <h2 className='py-5 text-4xl text-yellow-300 border-b-4 '>Phone/Web: </h2>
-                        <div className=' text-[20px] font-serif text-white '>
+                        <div className=' text-[20px]  text-white '>
                             <Link href='/+2349047271158'>
                                 <p className='hover:text-blue-600 transition duration-300 ease-in-out pb-3 '>+2349047271158</p>
                             </Link>
@@ -38,7 +38,7 @@ export default function Footer() {
                     </div>
                     <div>
                         <h1 className=' pb-5 text-4xl text-yellow-300 border-b-4'>Information</h1>
-                        <ul className=' text-[20px] font-serif text-white'>
+                        <ul className=' text-[20px]  text-white'>
                             <Link href='/About'>
                                 <li className='pb-3 hover:text-green-700 transition duration-300 ease-in-out'>About</li>
                             </Link>

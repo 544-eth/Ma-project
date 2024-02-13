@@ -1,14 +1,14 @@
-'use Client'
+'use client'
 import Image from 'next/image'
 import React from 'react'
-import { motion } from 'framer-motion'
+
 
 
  export default function Main() {
   return (
     
         <div className=' bg-gradient-to-bl from-blue-200 to-red-100  '>
-            <motion.section  className=' grid place-items-center  md:flex  md:justify-between w-[96%]  m-auto  h-[90vh] md:h-[90vh] '>
+            <section  className=' grid place-items-center  md:flex  md:justify-between w-[96%]  m-auto  h-[90vh] md:h-[90vh] '>
 
                 <div className='px-10 grid pt-2  '>
                     <div className='flex pb-0 pt-20  text-7xl text-gray-800' >
@@ -24,7 +24,7 @@ import { motion } from 'framer-motion'
                 <div className=' sm:mb-32  '>
                     <Image src='/image/bb1.png' alt='iphone 14' title='An iphone 14 with color red one of the rarest' width={500} height={500}  className=' object-contain' />
                 </div>
-            </motion.section>
+            </section>
         </div>
     
 

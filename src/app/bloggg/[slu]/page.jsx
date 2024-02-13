@@ -15,7 +15,7 @@ export default function Blo(props) {
 
 // ****************A slug for the blog****************\\
 
-            <div key={blogs.company} className='   '>
+            <div key={blogs.person} className='   '>
                 <div className=' flex pb-4 gap-5'>
                     
                     <section className=' overflow-hidden rounded-lg '>

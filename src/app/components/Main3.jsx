@@ -1,4 +1,4 @@
-'use Client'
+'use client'
 import styles from './main.module.css'
 import React from 'react'
 
