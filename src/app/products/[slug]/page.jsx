@@ -1,5 +1,5 @@
 "use client"
-import { myProducts } from '@/app/phone/Page'
+import { myProducts } from '@/app/phone/kite'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import Image from 'next/image'

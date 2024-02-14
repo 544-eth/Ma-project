@@ -2,7 +2,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { IoSearchOutline } from "react-icons/io5";
-import { myProducts } from "../phone/page"
+import { myProducts } from "../phone/kite"
 import React, { useState } from 'react'
 
 export default function Searc() {

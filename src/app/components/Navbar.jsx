@@ -4,7 +4,7 @@ import { LuShoppingCart } from "react-icons/lu";
 import React, { useState } from 'react'
 import Link from "next/link";
 import { AiOutlineCaretDown, AiOutlineCaretUp, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { myProducts } from "../phone/page";
+import { myProducts } from "../phone/kite";
 
 
 

@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { myCategory } from '../page'
-import { myProducts } from '@/app/phone/page'
+import { myProducts } from '@/app/phone/kite'
 
 
 const cbest = myCategory.splice(1).find(bestB => (

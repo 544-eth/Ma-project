@@ -1,13 +1,13 @@
 "use client"
 import Image from 'next/image'
 import Link from 'next/link'
-import { myProducts } from '../phone/Page';
+import { myProducts } from '../phone/kite';
 
 
  export default function Kards() {
      const shopProducts = myProducts.map(product => (
           <div className=' py-20 grid place-items-center  px-12 relative' key={product.id}>
-              <div className=' bg-gray-100 overflow-hidden rounded-lg shadow-md shadow-green-300 w-[300px] sm:w-[300px] '>
+              <div className=' bg-gray-100 overflow-hidden rounded-lg hover:shadow-md hover:shadow-blue-400 w-[300px] sm:w-[300px] '>
                       <div className=' group relative flex bg-gray-100 py-3 pb-10 flex-col place-items-center rounded-t-xl '>
                         
                           <div>

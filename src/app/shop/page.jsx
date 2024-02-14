@@ -2,7 +2,7 @@
 
 
 import React from 'react'
-import Kards from '../components/Cards'
+import Kards from '../components/cards'
 
 
 import Mains from './mains'
