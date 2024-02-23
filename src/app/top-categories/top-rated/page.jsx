@@ -7,15 +7,15 @@ import { myProducts } from '@/app/phone/kite'
 
 
 
-const abest = myCategory.splice(2).find(beste => (
+// const abest = myCategory.splice(2).find(beste => (
 
-    <div className=''>
-                <Link href={`/top-categories/${beste.id.split(' ').join('_')}`} >
-                    <h2>{beste.id}</h2>
-                </Link>
+//     <div className=''>
+//                 <Link href={`/top-categories/${beste.id.split(' ').join('_')}`} >
+//                     <h2>{beste.id}</h2>
+//                 </Link>
                 
-    </div>
-) )
+//     </div>
+// ) )
 
 export default function page() {
     const ratedpage = myProducts.filter(selling => selling.category =='Fold' )
@@ -51,7 +51,7 @@ export default function page() {
                 <div className=' grid place-items-center md:flex-col 2xl:gap-[40vw]  lg:grid-cols-2  w-[95%] m-auto  h-[90vh]'>
                     <div className=' pt-64 lg:pt-0'>
                         <div className='flex  text-purple-900  '>
-                            <h1 className=' font-bold text-8xl xl:text-9xl'>{abest.id}</h1>
+                            {/* <h1 className=' font-bold text-8xl xl:text-9xl'>{abest.id}</h1> */}
                         </div>
                         <div className='flex '>
                             <p className='text-2xl text-gray-500'>You get 30% off Discount when you purchase <br />This December </p>
