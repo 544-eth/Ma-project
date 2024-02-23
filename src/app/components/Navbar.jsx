@@ -63,7 +63,7 @@ export default function Navbar({data}) {
             
                  visibility={cartVisibility}
                   myProducts={productsInCart}
-                 onClose={() => setCartVisibility(false)}
+                 onClose={() => setCartVisibility(!cartVisibility)}
 
             />
 

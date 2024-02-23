@@ -37,7 +37,7 @@ import Example from './floating'
         <div  className=' bg-gradient-to-bl from-blue-200 to-red-100  '>
             
 
-                <div className=' grid place-items-center  md:flex  md:justify-between w-[96%]  m-auto  h-[95vh]  md:h-[90vh] '>
+                <div className=' grid place-items-center  md:flex  md:justify-between w-[96%]  m-auto  h-[165vh]  md:h-[90vh] '>
 
                     <div className='px-10 grid pt-2  '>
                         <div className='flex pb-0 pt-20  text-8xl 2xl:text-9xl text-gray-800' >
