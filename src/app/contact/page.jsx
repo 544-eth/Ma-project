@@ -1,9 +1,11 @@
+'use client'
 import React from 'react'
 import Link from 'next/link' 
 import Image from 'next/image'
 import { IoCall } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
 import { AiOutlineMessage } from "react-icons/ai";
+
 
 
 
@@ -16,7 +18,7 @@ export default function Contact() {
             <div className=' md:flex md:justify-between grid place-items-center h-[105vh] sm:h-[105vh xl:h-[90vh]  py-30 pb-12'>
                     <div className='px-10 grid pt-20'>
                             <div className='flex pt-5' >
-                                <h1 className=' font-serif text-7xl text-blue-800  pt-20'>Contact Us</h1>
+                                <h1 className='  text-7xl xl:text-9xl text-blue-800  pt-20'>Contact Us</h1>
                             </div>
                             <div className='flex pt-1  '>
                                 <p className='text-2xl text-gray-600 font-serif'>Help us to serve you better lay your <br />Complaints or suggestion here. </p>
@@ -29,17 +31,19 @@ export default function Contact() {
                                     </ul>
                                 </Link>
                                 <p className=' text-[23px] font-serif text-blue-800 '>-</p>
-                                <p className='text-[23px] font-serif text-gray-600'>   Contact Us</p>
+                                <p className='text-[23px] font-serif text-gray-600'>Contact Us</p>
                             </div>
                             
                     </div>
                     <div className=''>
-                        <Image src='/image/i12.png' alt='iphone 15pro max' title='An iphone 15pro max with the titanium color one of the rarest' width={500} height={500} className='' />
+
+                        <Image src='/image/i12.png'  width={500} height={500}/>
+                        
                     </div>
             </div>  
         </div>
         <div className='  bg-slate-50  '>
-            <div className=' grid w-[95%] place-items-center h-[300vh] sm:h-[270vh] md:h-[170vh] lg:h-[150vh] 2xl:h-[150vh] m-auto py-28'>
+            <div className=' grid w-[95%] place-items-center h-[300vh] sm:h-[270vh] md:h-[190vh] lg:h-[190vh] xl:h-[210vh] 2xl:h-[150vh] m-auto py-28'>
                 <div className=' w-[95%] grid place-items-center md:place-items-center lg:place-items-center font-serif'>
                     <h2 className=' py-4 text-2xl sm:text-2xl md:text-4xl lg:text-3xl text-blue-800'>Contact Us</h2>
                     <h1 className=' py-4 text-3xl md:text-4xl lg:text-5xl text-blue-800 font-bold'>Our Contact Details</h1>
@@ -74,7 +78,7 @@ export default function Contact() {
 
 
 
-                    <div className=' grid w-[95%] m-auto font-serif'>
+                    <div className=' grid w-[95%]  m-auto font-serif'>
                         <div className=' grid place-items-center md:place-items-center pt-28'>
                             <p className=' pb-5 items-center text-3xl md:text-4xl lg:text-5xl text-blue-800'>Send Us A Message</p>
                             <p className=' text-blue-800 sm:text-4xl md:text-5xl lg:text-6xl font-bold pb-10'>Get In Touch With Us</p>

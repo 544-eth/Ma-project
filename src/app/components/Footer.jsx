@@ -61,7 +61,7 @@ export default function Footer() {
                     <div className=' '>
                         <h1 className=' text-yellow-300 pb-5 text-4xl'>Newsletter </h1>
                         <div className='pb-5'>
-                        <input type="email" id="email" name="email" class=" w-[180px] h-12  py-2 mt-2 border border-gray-300 focus:outline-none focus:border-pink-500 transition duration-300 ease-in-out " required placeholder='Enter Your Email' />
+                        <input type="email" id="email" name="email" className=" w-[180px] h-12  py-2 mt-2 border border-gray-300 focus:outline-none focus:border-pink-500 transition duration-300 ease-in-out " required placeholder='Enter Your Email' />
                         </div>
                         <div>
                             <button className='bg-[black] p-2 w-[180px] text-[gold] rounded-lg font-bold  hover:bg-[gold] hover:text-black transition duration-500 ease-in-out'>SUBSCRIBE</button>

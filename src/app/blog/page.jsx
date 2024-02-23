@@ -25,15 +25,17 @@ export default function Post() {
                         </div>
                     </div>
                     <div className=' grid grid-cols-1 py-5  '>
-                        <Link href={`bloggg/${blogg.person.split(' ').join('_')}`} title={blogg.person}>
+                        <Link href={`/bloggg/${blogg.person.split(' ').join('_')}`} title={blogg.person}>
                             <h2 className=' text-4xl pb-4 text-green-950'>{blogg.happening} </h2>
                         </Link>
                         <p className=' text-justify'>{blogg.event}</p>
                     </div> 
                     <div>
-                        <button className=' text-green-600 font-bold'>
-                            {blogg.next}
-                        </button>
+                        <Link href={`/bloggg/${blogg.person.split(' ').join('_')}`}>
+                            <button className=' text-green-600 font-bold'>
+                                {blogg.next}
+                            </button>
+                        </Link>
                     </div>
 
 

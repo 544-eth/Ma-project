@@ -12,14 +12,14 @@ export default function page() {
   ))
   return (
     <div>
-            <main className=' bg-gradient-radial from-purple-700 to-purple-950 gap-3'>
-                <div className=' grid place-items-center md:flex md:justify-between  w-[95%] m-auto  h-[70vh] md:h-[70vh]'>
+            <main className=' bg-gradient-to-br from-red-100 to-blue-200 gap-3'>
+                <div className=' grid place-items-center md:flex md:justify-between  w-[95%] m-auto  h-[90vh] md:h-[90vh]'>
 
-                    <div className=' font-serif '>
-                      <div className='flex  text-white mt-48 md:mt-0'>
+                    <div className='  '>
+                      <div className='flex  text-blue-800 mt-48 md:mt-0'>
                           <h1 className=' font-bold text-8xl'>{bcookie.introduction}</h1>
                       </div>
-                      <div className='flex text-[20px] py-4 text-white gap-2'>
+                      <div className='flex text-[20px]  md:text-[30px]  py-4 text-blue-800 gap-2'>
                           <Link href='/Home'>
                               <p>Home</p>
                           </Link>

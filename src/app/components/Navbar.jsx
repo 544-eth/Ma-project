@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import Link from "next/link";
 import { AiOutlineCaretDown, AiOutlineCaretUp, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { myProducts } from "../phone/kite";
+import ShoppingCart from "./ShoppingCart";
 
 
 
@@ -16,6 +17,17 @@ import { myProducts } from "../phone/kite";
 
 
 export default function Navbar({data}) {
+
+    const [cartVisibility, setCartVisibility] = useState(false)
+    const [productsInCart, setProduct] = useState([])
+
+    const addProductToCart = (product) => {
+    const newProduct = {
+            ...product,
+            count: 1,
+        }
+        setProduct([...productsInCart, newProduct])
+    }
     
 
 
@@ -46,16 +58,31 @@ export default function Navbar({data}) {
   return (
     
         <div className=" bg-gradient-to-r from-blue-700 to-blue-400  border-b py-2  ">
+
+            <ShoppingCart
+            
+                 visibility={cartVisibility}
+                  myProducts={productsInCart}
+                 onClose={() => setCartVisibility(false)}
+
+            />
+
          <div className=" flex items-center w-[95%] m-auto justify-between sm:px-[50px]">
              <div className="grid  text-2xl md:text-4xl sm:text-2xl font-bold">
                  <Link href='/'>
                      <h1 className=" flex"><span className=" font-serif text-green-400">i</span><span className=" font-serif text-yellow-300">FEC</span> <span className="font-bold text-white">.</span></h1>
                  </Link>
              </div>
- 
+                {/* NAVBAR FOR LARGER SCREENS */}
              <nav className=" hidden lg:flex items-center justify-between 2xl:ml-16 absolute xl:ml-32 lg:ml-5 md:ml-3" >
              
                      <ul className="flex flex-row text-white font-bold 2xl:gap-40 xl:gap-28 lg:gap-16  gap-10 2xl:pl-72 xl:pl-20 lg:pl-20   ">
+
+                     <Link href='/testanimation'>
+                        <li>
+                            
+                        </li>
+                     </Link>
                          <Link href='/'>
                              <li className="hover:text-green-400 hover:border-b-2  border-white transition duration-200 ease-in-out"><span>HOME</span></li>
                          </Link>
@@ -98,17 +125,17 @@ export default function Navbar({data}) {
              </nav>
              <div className=" text-[20px] md:text-[20px] flex  gap-5 ">
 
-                     
+                     {/* SEARCH BOTTON IMPLEMENTATION */}
                  <div className=" relative    ">
                      <div className=" mx-auto max-w-md  "> 
                             <form action="" className=" relative w-max mx-auto ml-12">
-                                <input type="search" name="search" id="search"  className=" border peer z-10   h-10  outline-none cursor-pointer 2xl:pl-32 xl:pl-28 lg:pl-20 md:pl-24 sm:pl-14 pl-16  rounded-full w-10  focus:border-lime-400 focus:pl-[40px] 2xl:focus:w-[380px] xl:focus:w-[300px] lg:focus:w-[320px] md:focus:w-[380px] sm:focus:w-[300px] focus:w-[200px] focus:cursor-text focus:pr-4 transition duration-300 ease-in-out " onChange={handleSearch} />
+                                <input type="search" name="search" id="search"  className=" border peer z-10   h-10  outline-none cursor-pointer 2xl:pl-32 xl:pl-28 lg:pl-20 md:pl-24 sm:pl-14 pl-16  rounded-full w-10  focus:border-lime-400 focus:pl-[40px] 2xl:focus:w-[380px] xl:focus:w-[200px] lg:focus:w-[200px] md:focus:w-[380px] sm:focus:w-[300px] focus:w-[200px] focus:cursor-text focus:pr-4 transition duration-300 ease-in-out " onChange={handleSearch} />
                                 <IoSearchOutline className=" absolute inset-y-0 my-auto h-8 w-12 px-3.5 stroke-gray-500  border-transparent peer-focus:border-lime-400"  /> 
 
                                 
                                  {
                                     activeSearch.length != 0 && (
-                                        <div className=" absolute top-16 bg-gradient-to-bl from-blue-500 to-blue-800 rounded-lg text-slate-800 w-full flex flex-col left-1/2 -translate-x-1/2">
+                                        <div className=" absolute top-16 bg-gradient-to-bl z-50 from-blue-400 to-blue-800 rounded-lg text-slate-800 w-full flex flex-col left-1/2 -translate-x-1/2">
                                             <div className=" flex flex-col p-3 gap-3 text-white font-bold tracking-wider">
                                                 {
                                                     activeSearch.slice(0, 4).map((value, key) => {
@@ -134,16 +161,13 @@ export default function Navbar({data}) {
                      
                 </div> 
  
+                     {/* SHOPPING CART */}
                      <div className=" relative cursor-pointer flex place-items-center">
                          
                              <div className=" ">
-                                 
-                                     
+                                     <button onClick={() => setCartVisibility(true)} >
                                          <LuShoppingCart className=" text-white"/>
-                                     <span className=" absolute top-1 -right-2 text-[13px] bg-gradient-to-r from-blue-600 to-red-700 h-[18px] w-[18px] rounded-full grid place-items-center text-white">{0}</span>
-                                     
-                                     
-                                 
+                                     </button>
                              </div>
                          
                      </div>
@@ -151,7 +175,7 @@ export default function Navbar({data}) {
                         <AiOutlineMenu className=" text-[white] font-bold"/>
                      </div>
              </div>
-
+                {/* NAVBAR FOR SMALLER SCREEN */}
             <div className={
                 menuOpen ? 'fixed z-50 left-0 top-0 w-[50%] sm:w-[35%] md:w-[250px]  lg:hidden h-[600px] rounded-br-xl bg-gradient-to-br from-blue-500 to-blue-800 ease-in-out duration-500' : 'fixed  left-[-100%] top-0 p-10  ease-in-out duration-500  '
             }

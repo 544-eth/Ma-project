@@ -22,19 +22,19 @@ export default function page(props) {
 
   return (
     <div>
-            <main className='  bg-gradient-radial from-purple-700 to-purple-950  '>
-                <div className=' grid place-items-center md:flex md:justify-between w-[95%] m-auto h-[70vh]'>
+            <main className='  bg-gradient-to-br from-red-100 to-blue-200  '>
+                <div className=' grid place-items-center md:flex md:justify-between md:gap-32 w-[95%] m-auto h-[70vh]'>
                     <div className=' mt-36 md:mt-0'>
-                          <h1 className=' font-bold text-6xl text-white 2xl:text-8xl'>{abtArray.name}</h1>
+                          <h1 className=' font-bold text-7xl text-green-400 2xl:text-8xl'>{abtArray.name}</h1>
                     </div>
-                    <div className=' mb-36 md:mb-0 '>
+                    <div className='  mb-36 md:mb-0 '>
                         <Image src={`/image/${abtArray.image4}.png`}   width={500} height={500} className='' />
                     </div>
                 </div>
             </main>
 
             
-            <div className=' bg-slate-200'>
+            <div className=' bg-gradient-to-br from-blue-200 to-red-100'>
                   <div className=' grid py-32 h-[150vh] sm:h-[145vh] md:h-[120vh] lg:h-[120vh] xl:h-[100vh] w-[95%] m-auto  '>
                       <div className='grid place-items-center md:grid-cols-2 md:place-items-start'>
 

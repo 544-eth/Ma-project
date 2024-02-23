@@ -113,32 +113,32 @@ export default function Aboutteam() {
 
   return (
     <div>
-        <main className='  bg-gradient-radial from-blue-700 to-blue-900 '>
-            <div className='  grid place-items-center md:flex md:justify-between w-[95%] m-auto h-[70vh] md:h-[70vh] lg:h-[90vh] xl:h-[70vh] 2xl:h-[80vh] '>
-                    <div className='grid font-serif  '>
-                    <div className='flex  text-white mt-52 md:mt-0 '>
+        <main className='  bg-gradient-to-bl from-red-100 to-blue-200 '>
+            <div className='  grid place-items-center md:flex md:justify-between w-[95%] m-auto h-[90vh] md:h-[90vh] lg:h-[90vh] xl:h-[90vh] 2xl:h-[90vh] '>
+                    <div className='grid   '>
+                    <div className='flex  text-blue-800 mt-52 md:mt-0 '>
                         <h1 className=' font-bold text-8xl'>{bArray.tag22}</h1>
                     </div>
-                    <div className='flex text-[20px]  text-white gap-2'>
+                    <div className='flex text-[30px]  text-blue-800 gap-2'>
                         <Link href='/Home'>
                             <p>Home</p>
                         </Link>
-                        <p className='  text-white'>-</p>
+                        <p className=''>-</p>
                         <p >{bArray.tag23} </p>
                     </div>
                     
 
                     
                     </div>
-                    <div className=''>
-                        <Image src={`/image/${bArray.image4}.png`}   width={450} height={450} className=' pb-24 sm:pb-0 ' />
+                    <div className='flex left-96'>
+                        <Image src={`/image/${bArray.image4}.png`}   width={450} height={450} className=' pb-24 sm:pb-0  ' />
                     </div>
             </div>
         </main>
 
         <div className=' bg-gradient-to-tl from-teal-100 to-purple-200 '>
-              <div className=' grid place-items-center h-[50vh] md:h-[70vh] lg:h-[100vh]  font-thin w-[95%] m-auto'>
-                <h2 className=' font-serif text-gray-600 lg:text-[30px]  '>{bArray.secondH2}</h2>
+              <div className=' grid place-items-center h-[70vh] md:h-[70vh] lg:h-[70vh]  font-thin w-[95%] m-auto'>
+                <h2 className='text-gray-600 md:text-[30px] lg:text-[40px]  xl:text-[50px] '>{bArray.secondH2}</h2>
               </div>
         </div>
 

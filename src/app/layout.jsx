@@ -4,24 +4,27 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import './globals.css'
 
+import React from 'react'
+
+
 
 
 
 const inter = Abel({ subsets: ['latin'], weight: ['400'] })
 const interB = Slabo_27px({ subsets: ['latin'], weight: ['400']})
 
-export const metadata = {
+  export const metadata = {
   title: 'iFec Online Store',
   description: 'Your online store for Iphones',
 }
-
+ 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <body className={inter.className}>
             <Navbar />
-            {children}
-            
+              {children}
             <Footer />
       </body>
     </html>

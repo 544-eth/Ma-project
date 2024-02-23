@@ -65,11 +65,11 @@ export default function Page(props) {
     ))
   return (
       <div className=' '>
-            <div className=' bg-slate-200'>
-                <main className='grid place-items-center w-[95%] m-auto 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2  md:h-[100vh] md:justify-between sm:h-[130vh] sm:grid sm:place-items-center h-[100vh] '>
+            <div className='  bg-gradient-to-bl from-blue-200 to-red-100 '>
+                <main className='grid place-items-center w-[95%] m-auto 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2  md:h-[90vh] md:justify-between sm:h-[130vh] sm:grid sm:place-items-center h-[90vh] '>
                     <div className=' pt-36 sm:pt-28'>
                         <div className='  text-purple-900 sm:mb-5'>
-                            <h1 className=' font-t font-serif 2xl:text-8xl xl:text-7xl lg:text-7xl md:text-6xl sm:text-6xl text-5xl'>{ourProduct.id}</h1>
+                            <h1 className=' font-t font-serif 2xl:text-8xl xl:text-7xl lg:text-7xl md:text-6xl sm:text-4xl text-3xl'>{ourProduct.id}</h1>
                         </div>
                         <div className=''>
                             <p className='text-2xl text-gray-500'>You get 30% off Discount when you purchase <br />This December </p>
@@ -82,7 +82,7 @@ export default function Page(props) {
             </div>
 
 
-            <div className='  bg-slate-50'>
+            <div className='  bg-gradient-to-bl from-red-100 to-blue-200 '>
                 <div className='grid place-items-center w-[95%] m-auto 2xl:justify-between xl:justify-between lg:justify-around md:grid-cols-2  sm:grid-cols-1 h-[160vh] md:h-[100vh]  '>
 
                     <div className='grid place-items-center w-[280px] sm:w-[320px] md:w-[300px] h-[450px] lg:w-[380px]  bg-slate-100 border shadow-md shadow-green-400  rounded-xl   '>
@@ -160,13 +160,13 @@ export default function Page(props) {
                 </div>
             </div>
 
-            <div className='  bg-slate-50 '>
+            <div className='  bg-gradient-to-tr from-blue-200 to-red-100  '>
                 <div className=' grid place-items-center w-[95%] m-auto h-[80vh]   ' >
                     <Faq/>
                 </div>
             </div>
 
-            <div >
+            <div className='  bg-gradient-to-bl from-red-100 to-blue-200' >
                 <div className='grid place-items-center text-5xl py-16  '>
                     <h2 className='border-4 border-solid border-r-emerald-800 border-l-emerald-800 rounded-xl animate-flowColors p-4 text-gray-800'>Related Product</h2>
                 </div>
@@ -176,6 +176,6 @@ export default function Page(props) {
                     
                 </div>
             </div>
-    </div>
+      </div>
   )
 }

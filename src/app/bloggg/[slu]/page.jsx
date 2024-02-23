@@ -40,9 +40,9 @@ export default function Blo(props) {
     ))
   return (
     <div>
-            <div className='bg-slate-200 '>
+            <div className='bg-gradient-to-br from-red-200 to-blue-200 '>
                 <main className=' grid place-items-center font-serif sm:grid-cols-1 md:grid-cols-2 h-[80vh]  w-[95%] m-auto py-35 xl:gap-[35vw] '>
-                        <div className='flex text-purple-400 mt-32 md:mt-0 '>
+                        <div className='flex text-gray-900 mt-32 md:mt-0 '>
                             <h1 className=' font-bold text-3xl sm:text-4xl md:text-4xl lg:text-6xl tracking-wide'>{toBlog.happening}</h1>
                         </div>
                         <div className=' flex mb-20 md:mb-0 md:w-[200px]  lg:w-[300px]'>
@@ -51,7 +51,7 @@ export default function Blo(props) {
                 </main>
             </div>
 
-            <div className=' bg-slate-100'>
+            <div className=' bg-gradient-to-bl from-green-200 to-yellow-200'>
                 <div className=' grid  w-[90%] m-auto gap-20 md:grid-cols-2 py-20 sm:grid-cols-1'>
 
                     <div className=' font-serif '>
@@ -129,12 +129,12 @@ export default function Blo(props) {
                     
                 
 
-                    <div className=' font-serif'>
-                        <div className='grid place-items-center w-full rounded-xl border-2 p-10  '>
+                    <div className=' '>
+                        <div className='grid place-items-center w-full rounded-xl border-2 border-black p-10  '>
                             <div>
                                 <h2 className=' pb-3 text-purple-800 text-3xl'>Search Here</h2>
                             </div>
-                            <div className=' flex items-center border rounded-xl  '>
+                            <div className=' flex items-center border border-black rounded-xl  '>
                                 
                                 
                                     <form >
@@ -149,7 +149,7 @@ export default function Blo(props) {
 
                         </div>
 
-                        <div className=' rounded-xl border-2 '>
+                        <div className=' rounded-xl border-2 border-black '>
                             <div className=' p-5  '> 
                                 <h1 className=' text-teal-900 font-bold text-[25px]'>Recent</h1>
                                 {recentRelated}
@@ -160,7 +160,7 @@ export default function Blo(props) {
 
                         </div>
                     
-                        <div className=' border-2 rounded-lg p-5'>
+                        <div className=' border-2 border-black rounded-lg p-5'>
                         
                                 <h1 className=' text-2xl text-emerald-800 font-bold'>Category</h1>
                                 <div>
@@ -172,7 +172,7 @@ export default function Blo(props) {
                         <div className=' py-5'> 
 
                         </div>
-                        <div className=' border-2 rounded-lg p-5'>
+                        <div className=' border-2 border-black rounded-lg p-5'>
                         
                                 <h1 className=' text-2xl text-emerald-800 font-bold'>Tags</h1>
                                 <div>

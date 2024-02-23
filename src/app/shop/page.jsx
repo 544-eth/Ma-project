@@ -14,7 +14,7 @@ const Amazon = () => {
         <section>
           <div>
               <div className='  bg-gradient-to-bl from-blue-200 to-red-100   '>
-                  <div className=' grid place-items-center w-[95%] 2xl:h-[120vh] xl:h-[100vh] lg:h-[80vh] m-auto md:h-[70vh]'>
+                  <div className=' grid place-items-center w-[95%] 2xl:h-[90vh] xl:h-[90vh] lg:h-[80vh] m-auto md:h-[70vh]'>
                     <Mains/>
                   </div>
               </div>
