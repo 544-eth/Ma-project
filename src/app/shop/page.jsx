@@ -1,8 +1,6 @@
 "use client"
-
-
 import React from 'react'
-import Kards from '../components/cards'
+import Kards from '../components/Card'
 
 
 import Mains from './mains'
