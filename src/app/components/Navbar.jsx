@@ -57,7 +57,7 @@ export default function Navbar({data}) {
 
   return (
     
-        <div className=" bg-gradient-to-r from-blue-700 to-blue-400  border-b py-2  ">
+        <div className=" bg-gradient-to-r from-blue-800 to-blue-400  border-b py-1  ">
 
             <ShoppingCart
             
@@ -66,15 +66,15 @@ export default function Navbar({data}) {
                  onClose={() => setCartVisibility(!cartVisibility)}
 
             />
-
-         <div className=" flex items-center w-[95%] m-auto justify-between sm:px-[50px]">
+            {/* LOGO */}
+         <div className=" flex items-center w-[95%] m-auto justify-between ">
              <div className="grid  text-2xl md:text-4xl sm:text-2xl font-bold">
                  <Link href='/'>
                      <h1 className=" flex"><span className=" font-serif text-green-400">i</span><span className=" font-serif text-yellow-300">FEC</span> <span className="font-bold text-white">.</span></h1>
                  </Link>
              </div>
                 {/* NAVBAR FOR LARGER SCREENS */}
-             <nav className=" hidden lg:flex items-center justify-between 2xl:ml-16 absolute xl:ml-[70px] lg:ml-5 md:ml-3" >
+             <nav className=" hidden lg:flex items-center justify-between 2xl:ml-16 absolute xl:ml-[20px] lg:ml-5 " >
              
                      <ul className="flex flex-row text-white font-bold 2xl:gap-40 xl:gap-28 lg:gap-16  gap-10 2xl:pl-72 xl:pl-20 lg:pl-20   ">
 
