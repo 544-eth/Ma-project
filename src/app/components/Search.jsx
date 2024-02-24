@@ -40,10 +40,10 @@ export default function Searc() {
    ))
  return (
    <div>
-        <div className=" relative bg-white py-1 rounded-lg shadow-sm sm:mx-auto sm:max-w-lg xl:px-6 lg:px-4 md:px-3 sm:px-4  ">
+        <div className=" relative bg-white py-1 px-4 rounded-lg shadow-sm sm:mx-auto sm:max-w-lg xl:px-6 lg:px-4 md:px-3 sm:px-4  ">
                      <div className=" mx-auto max-w-md"> 
                             <form action="" className=" relative w-max mx-auto">
-                                <input type="search" name="search" id="search" className=" relative peer z-10 bg-transparent w-10 h-10  cursor-pointer outline-none focus:cursor-text pl-12 focus:pl-8 focus:pr-4 rounded-full focus:w-full focus:border-lime-400" defaultValue={searcPhones}  />
+                                <input type="search" name="search" id="search" className=" relative peer z-10 bg-transparent w-10 h-10  cursor-pointer outline-none focus:cursor-text pl-12 focus:pl-12 focus:pr-2 rounded-full focus:w-20 focus:border-red-400" defaultValue={searcPhones}  />
 
                                 <Link href='/search'>
                                         <IoSearchOutline onClick={onSubmit}  className=" absolute peer-focus:cursor-pointer inset-y-0 my-auto px-3.5 h-8 w-12 border-transparent border-lime-400 stroke-gray-500 peer-focus:border-lime-400 peer-focus:stroke-lime-400" /> 

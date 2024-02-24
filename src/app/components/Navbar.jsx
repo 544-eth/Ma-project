@@ -74,7 +74,7 @@ export default function Navbar({data}) {
                  </Link>
              </div>
                 {/* NAVBAR FOR LARGER SCREENS */}
-             <nav className=" hidden lg:flex items-center justify-between 2xl:ml-16 absolute xl:ml-32 lg:ml-5 md:ml-3" >
+             <nav className=" hidden lg:flex items-center justify-between 2xl:ml-16 absolute xl:ml-[70px] lg:ml-5 md:ml-3" >
              
                      <ul className="flex flex-row text-white font-bold 2xl:gap-40 xl:gap-28 lg:gap-16  gap-10 2xl:pl-72 xl:pl-20 lg:pl-20   ">
 
@@ -129,7 +129,7 @@ export default function Navbar({data}) {
                  <div className=" relative    ">
                      <div className=" mx-auto max-w-md  "> 
                             <form action="" className=" relative w-max mx-auto ml-12">
-                                <input type="search" name="search" id="search"  className=" border peer z-10   h-10  outline-none cursor-pointer 2xl:pl-32 xl:pl-28 lg:pl-20 md:pl-24 sm:pl-14 pl-16  rounded-full w-10  focus:border-lime-400 focus:pl-[40px] 2xl:focus:w-[380px] xl:focus:w-[200px] lg:focus:w-[200px] md:focus:w-[380px] sm:focus:w-[300px] focus:w-[200px] focus:cursor-text focus:pr-4 transition duration-300 ease-in-out " onChange={handleSearch} />
+                                <input type="search" name="search" id="search"  className=" border peer z-10   h-10  outline-none cursor-pointer 2xl:pl-32 xl:pl-28 lg:pl-20 md:pl-24 sm:pl-14 pl-16  rounded-full w-10  focus:border-lime-400 focus:pl-[40px] 2xl:focus:w-[380px] xl:focus:w-[200px] lg:focus:w-[200px] md:focus:w-[380px] sm:focus:w-[300px] focus:w-[150px] focus:cursor-text focus:pr-4 transition duration-300 ease-in-out " onChange={handleSearch} />
                                 <IoSearchOutline className=" absolute inset-y-0 my-auto h-8 w-12 px-3.5 stroke-gray-500  border-transparent peer-focus:border-lime-400"  /> 
 
                                 
