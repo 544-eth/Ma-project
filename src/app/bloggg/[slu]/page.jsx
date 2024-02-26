@@ -40,8 +40,8 @@ export default function Blo(props) {
     ))
   return (
     <div>
-            <div className='bg-gradient-to-br from-red-200 to-blue-200 '>
-                <main className=' grid place-items-center font-serif sm:grid-cols-1 md:grid-cols-2 h-[80vh]  w-[95%] m-auto py-35 xl:gap-[35vw] '>
+            <div className='bg-gradient-to-br from-red-100 to-blue-200 '>
+                <main className=' grid place-items-center sm:grid-cols-1 md:grid-cols-2 h-[80vh]  w-[95%] m-auto py-35 xl:gap-[35vw] '>
                         <div className='flex text-gray-900 mt-32 md:mt-0 '>
                             <h1 className=' font-bold text-3xl sm:text-4xl md:text-4xl lg:text-6xl tracking-wide'>{toBlog.happening}</h1>
                         </div>
@@ -51,10 +51,10 @@ export default function Blo(props) {
                 </main>
             </div>
 
-            <div className=' bg-gradient-to-bl from-green-200 to-yellow-200'>
+            <div className=' bg-gradient-to-br from-blue-200 to-red-100'>
                 <div className=' grid  w-[90%] m-auto gap-20 md:grid-cols-2 py-20 sm:grid-cols-1'>
 
-                    <div className=' font-serif '>
+                    <div className='  '>
                         <div className='  m-auto bg-contain  '>
                             <Image src={`/image/${toBlog.image}.jpg`}  width={200} height={200} className=' rounded-md w-full'/>
                         </div>

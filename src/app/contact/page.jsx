@@ -15,23 +15,23 @@ export default function Contact() {
   return (
     <div>
         <div className='  bg-gradient-to-bl from-red-100 to-blue-100 '>
-            <div className=' md:flex md:justify-between grid place-items-center h-[105vh] sm:h-[105vh xl:h-[90vh]  py-30 pb-12'>
+            <div className=' md:flex md:justify-between grid place-items-center h-[120vh] sm:h-[120vh] md:h-[120vh] xl:h-[90vh]  py-30 pb-12'>
                     <div className='px-10 grid pt-20'>
                             <div className='flex pt-5' >
                                 <h1 className='  text-7xl xl:text-9xl text-blue-800  pt-20'>Contact Us</h1>
                             </div>
                             <div className='flex pt-1  '>
-                                <p className='text-2xl text-gray-600 font-serif'>Help us to serve you better lay your <br />Complaints or suggestion here. </p>
+                                <p className='text-2xl text-gray-600 '>Help us to serve you better lay your <br />Complaints or suggestion here. </p>
 
                             </div>
                             <div className='flex pb-10 flex-row gap-3 '>
                                 <Link href='/'>
                                     <ul >
-                                        <li className=' text-[23px] font-serif text-blue-800 '>Home</li>
+                                        <li className=' text-[23px]  text-blue-800 '>Home</li>
                                     </ul>
                                 </Link>
-                                <p className=' text-[23px] font-serif text-blue-800 '>-</p>
-                                <p className='text-[23px] font-serif text-gray-600'>Contact Us</p>
+                                <p className=' text-[23px]  text-blue-800 '>-</p>
+                                <p className='text-[23px]  text-gray-600'>Contact Us</p>
                             </div>
                             
                     </div>
@@ -42,9 +42,9 @@ export default function Contact() {
                     </div>
             </div>  
         </div>
-        <div className='  bg-slate-50  '>
-            <div className=' grid w-[95%] place-items-center h-[300vh] sm:h-[270vh] md:h-[190vh] lg:h-[190vh] xl:h-[210vh] 2xl:h-[150vh] m-auto py-28'>
-                <div className=' w-[95%] grid place-items-center md:place-items-center lg:place-items-center font-serif'>
+        <div className='  bg-gradient-to-tl from-blue-200 to-red-100'>
+            <div className=' grid w-[95%] place-items-center h-[300vh] sm:h-[270vh] md:h-[220vh] lg:h-[220vh] xl:h-[210vh] 2xl:h-[150vh] m-auto py-28'>
+                <div className=' w-[95%] grid place-items-center md:place-items-center lg:place-items-center '>
                     <h2 className=' py-4 text-2xl sm:text-2xl md:text-4xl lg:text-3xl text-blue-800'>Contact Us</h2>
                     <h1 className=' py-4 text-3xl md:text-4xl lg:text-5xl text-blue-800 font-bold'>Our Contact Details</h1>
                     <p className=' text-gray-600 text-2xl text-justify'>Get in contact with us for more informations about our product incase of a software issue we will make sure you are refunded in full

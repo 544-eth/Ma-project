@@ -66,10 +66,10 @@ export default function Aboutus() {
          </div>
 
     </section> 
- ))
+ )) 
   return (
     <div>
-            <main className='  bg-gradient-to-bl from-red-200 to-blue-200'>
+            <main className='  bg-gradient-to-bl from-red-100 to-blue-200'>
                 <div className=' grid place-items-center w-[95%] m-auto  md:flex md:justify-between h-[90vh] md:h-[90vh]' >
                             <div className='px-10 grid  '>
                                 <div className='flex text-blue-800 mt-48 md:mt-0 '>
@@ -115,11 +115,11 @@ export default function Aboutus() {
                     <Image src={`/image/${eArray.backgroundImage}.png`} width={800} height={700} />
                   </div>
                   <div className=' absolute inset-0 inset-y-0   bg-gradient-radial from-transparent via-transparent to-black'></div>
-                  <div className=' absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[10vh] lg:translate-y-[-30vh] xl:translate-y-[-30vh] 2xl:translate-y-[-30vh] lg:mt-[70vh] mt-[17vh]  md:mt-[14vh]  group-hover:translate-y-[-6vh] lg:group-hover:translate-y-[-46vh] xl:group-hover:translate-y-[-46vh] 2xl:group-hover:translate-y-[-49vh] transition-all ease-in-out duration-300'>
-                      <h1 className=' text-4xl lg:text-8xl  text-yellow-50 font-extrabold pb-10 lg:pb-16 xl:pb-20 '>{eArray.tag2}</h1>
-                      <p className=' italic mb-3 text-yellow-50 text-2xl'>{eArray.tag4}</p>
-                      <p className=' italic mb-3 text-yellow-50 text-2xl'>{eArray.tag5}</p>
-                      <p className=' italic mb-3 text-yellow-50 text-2xl'>{eArray.tag6}</p>
+                  <div className=' absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[10vh] lg:translate-y-[-5vh] xl:translate-y-[-6vh] 2xl:translate-y-[-30vh] lg:mt-[70vh] mt-[40vh]  md:mt-[40vh] md:group-hover:translate-y-[-20vh]  group-hover:translate-y-[-19vh] lg:group-hover:translate-y-[-46vh] xl:group-hover:translate-y-[-40vh] 2xl:group-hover:translate-y-[-49vh] transition-all ease-in-out duration-300'>
+                      <h1 className=' text-2xl md:text-4xl lg:text-8xl  text-yellow-50 font-extrabold pb-10 lg:pb-16 xl:pb-20 '>{eArray.tag2}</h1>
+                      <p className=' italic mb-3 text-yellow-50 text-[20px] md:text-2xl'>{eArray.tag4}</p>
+                      <p className=' italic mb-3 text-yellow-50 text-[20px] md:text-2xl'>{eArray.tag5}</p>
+                      <p className=' italic mb-3 text-yellow-50 text-[20px] md:text-2xl'>{eArray.tag6}</p>
 
                   </div>
               </div>

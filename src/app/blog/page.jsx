@@ -8,11 +8,11 @@ import { SlCalender } from "react-icons/sl";
 
 export default function Post() {
     const myArrayBlog = myBlogPost.map(blogg => (
-        <div key={blogg.date} className=' h-[55vh] '>
+        <div key={blogg.date} className=' h-[55vh] md:h-[40vh] '>
             <div className='flex-row  p-5 gap-4 '>
                 <div className='w-[280px] sm:w-[280px] md:w-[350px] '>
                     <div className='rounded-xl shadow-md shadow-blue-400  overflow-hidden'>
-                        <Image src={`/image/${blogg.image}.jpg`} alt={blogg.person} width={420}  height={400} className=' rounded-xl transform hover:scale-125 hover:rotate-6 cursor-zoom-in transition-transform duration-300 translate-x '/>
+                        <Image src={`/image/${blogg.image}.jpg`} alt={blogg.person} width={420}  height={400} className=' rounded-xl transform hover:scale-125 hover:rotate-6 cursor-zoom-in transition-transform duration-300 '/>
                     </div>
                     
                     <div className='flex flex-row m-auto py-6 items-center justify-between'>
@@ -52,14 +52,16 @@ export default function Post() {
   return (
     <div>
         <Page2 />
+        <div className=' bg-gradient-to-bl from-red-100 to-blue-200'>
 
-        <div className=' grid place-items-center w-[95%] m-auto xl:grid-cols-3 lg:grid-cols-2 py-24  md:grid-cols-2 sm:grid-cols-1 '>
-           {myArrayBlog}
+            <div className=' grid place-items-center w-[95%] h-[450vh]  md:h-[290vh] lg:h-[120vh] xl:h-[120vh] m-auto xl:grid-cols-3 lg:grid-cols-2 py-2  md:grid-cols-2 sm:grid-cols-1 '>
+            {myArrayBlog}
+            </div>
+            <div className=' flex items-center justify-center p-5 py-10'>
+                <button className=' bg-green-600 text-white font-semibold p-1 px-10 rounded-md hover:bg-slate-600'>Next</button>
+            </div>
         </div>
 
-        <div className=' flex items-center justify-center p-5'>
-            <button className=' bg-green-600 text-white font-semibold p-1 px-10 rounded-md hover:bg-slate-600'>Next</button>
-        </div>
 
     </div>
     
