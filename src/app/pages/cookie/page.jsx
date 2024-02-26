@@ -13,7 +13,7 @@ export default function page() {
   return (
     <div>
             <main className=' bg-gradient-to-br from-red-100 to-blue-200 gap-3'>
-                <div className=' grid place-items-center md:flex md:justify-between  w-[95%] m-auto  h-[90vh] md:h-[90vh]'>
+                <div className=' grid place-items-center md:flex md:justify-between  w-[95%] m-auto  h-[120vh] md:h-[120vh]'>
 
                     <div className='  '>
                       <div className='flex  text-blue-800 mt-48 md:mt-0'>

@@ -54,10 +54,10 @@ export default function Post() {
         <Page2 />
         <div className=' bg-gradient-to-bl from-red-100 to-blue-200'>
 
-            <div className=' grid place-items-center w-[95%] h-[450vh]  md:h-[290vh] lg:h-[120vh] xl:h-[120vh] m-auto xl:grid-cols-3 lg:grid-cols-2 py-2  md:grid-cols-2 sm:grid-cols-1 '>
+            <div className=' grid place-items-center w-[95%] h-[459vh]  md:h-[290vh] lg:h-[120vh] xl:h-[120vh] m-auto xl:grid-cols-3 lg:grid-cols-2 py-2  md:grid-cols-2 sm:grid-cols-1 '>
             {myArrayBlog}
             </div>
-            <div className=' flex items-center justify-center p-5 py-10'>
+            <div className=' flex items-center justify-center p-5 h-[30vh]'>
                 <button className=' bg-green-600 text-white font-semibold p-1 px-10 rounded-md hover:bg-slate-600'>Next</button>
             </div>
         </div>

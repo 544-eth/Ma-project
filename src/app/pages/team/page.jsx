@@ -114,7 +114,7 @@ export default function Aboutteam() {
   return (
     <div>
         <main className='  bg-gradient-to-bl from-red-100 to-blue-200 '>
-            <div className='  grid place-items-center md:flex md:justify-between w-[95%] m-auto h-[90vh] md:h-[90vh] lg:h-[90vh] xl:h-[90vh] 2xl:h-[90vh] '>
+            <div className='  grid place-items-center md:flex md:justify-between w-[95%] m-auto h-[120vh] md:h-[120vh] lg:h-[90vh] xl:h-[90vh] 2xl:h-[90vh] '>
                     <div className='grid   '>
                     <div className='flex  text-blue-800 mt-52 md:mt-0 '>
                         <h1 className=' font-bold text-8xl'>{bArray.tag22}</h1>
